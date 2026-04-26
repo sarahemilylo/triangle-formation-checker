@@ -26,17 +26,29 @@ public class triangle_formation_checker implements ActionListener{
 	// Methods
 	public void actionPerformed(ActionEvent evt){
 		if(evt.getSource() == theButton){
-			dblA = Double.parseDouble(theA.getText());
-			sideA.setText("Side A =  " + dblA);
-			dblB = Double.parseDouble(theB.getText());
-			sideB.setText("Side B = " + dblB);
-			dblC = Double.parseDouble(theC.getText());
-			sideC.setText("Side C = " + dblC);
-			double dblHalfPerimeter = (dblA + dblB + dblC)/2;
-			if(dblA < dblHalfPerimeter && dblB < dblHalfPerimeter && dblC < dblHalfPerimeter){
-				double dblArea = Math.sqrt(dblHalfPerimeter*(dblHalfPerimeter - dblA)*(dblHalfPerimeter - dblB)*(dblHalfPerimeter - dblC));
-				theLabel.setText("The area is " + dblArea);
-			}else{
+			try{
+				dblA = Double.parseDouble(theA.getText());
+				dblB = Double.parseDouble(theB.getText());
+				dblC = Double.parseDouble(theC.getText());
+				
+				if(dblA <= 0 || dblB <= 0 || dblC <= 0){
+					theLabel.setText("Error: sides must be positive numbers");
+					return;
+				}
+				
+				sideA.setText("Side A =  " + dblA);
+				sideB.setText("Side B = " + dblB);
+				sideC.setText("Side C = " + dblC);
+				
+				double dblHalfPerimeter = (dblA + dblB + dblC)/2;
+				
+				if(dblA < dblHalfPerimeter && dblB < dblHalfPerimeter && dblC < dblHalfPerimeter){
+					double dblArea = Math.sqrt(dblHalfPerimeter*(dblHalfPerimeter - dblA)*(dblHalfPerimeter - dblB)*(dblHalfPerimeter - dblC));
+					theLabel.setText("The area is " + dblArea);
+				}else{
+					theLabel.setText("Error, can't make a triangle");
+				}
+			}catch(NumberFormatException e){
 				theLabel.setText("Error, can't make a triangle");
 			}
 		}else if(evt.getSource() == theA){
@@ -47,7 +59,7 @@ public class triangle_formation_checker implements ActionListener{
 			sideB.setText("Side B = " + dblB);
 		}else if(evt.getSource() == theC){
 			dblC = Double.parseDouble(theC.getText());
-			sideC.setText("Side C = " + dblB);
+			sideC.setText("Side C = " + dblC);
 		}
 	}
 	
