@@ -25,3 +25,15 @@ The program uses **Heron’s Formula**:
 s = (a + b + c) / 2
 
 Area = √[s(s - a)(s - b)(s - c)]
+```
+
+---
+
+## ▶️ How to Run
+
+1. Make sure you have Java installed.
+
+2. Compile the program:
+```bash
+javac triangle_formation_checker.java
+
