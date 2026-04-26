@@ -5,6 +5,8 @@ This is a simple Java Swing GUI program that checks whether three side lengths c
 
 The user enters three side lengths, and the program determines if a valid triangle can be created. If the triangle is valid, the program calculates the area using **Heron’s Formula**. If the sides cannot form a triangle, an error message is displayed.
 
+<img width="1593" height="850" alt="triangle_formation_calculator_interface" src="https://github.com/user-attachments/assets/1b612d2e-074d-48be-8a4d-418747a7f497" />
+
 ---
 
 ## ⚙️ Features
@@ -13,8 +15,6 @@ The user enters three side lengths, and the program determines if a valid triang
 - 📐 Calculates area using Heron’s Formula
 - 🖥️ Simple Java Swing GUI
 - 📢 Displays either the triangle area or an error message
-
-<img width="1593" height="850" alt="triangle_formation_calculator_interface" src="https://github.com/user-attachments/assets/1b612d2e-074d-48be-8a4d-418747a7f497" />
 
 ---
 
