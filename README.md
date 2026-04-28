@@ -1,5 +1,9 @@
 # 📐 Triangle Formation Checker
 
+![Java](https://img.shields.io/badge/Language-Java-blue.svg)
+![GUI](https://img.shields.io/badge/GUI-Swing-green.svg)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)
+
 ## 📝 Description
 This is a simple Java Swing GUI program that checks whether three side lengths can form a triangle.
 
